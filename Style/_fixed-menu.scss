@@ -1,0 +1,75 @@
+.points__list {
+    position: fixed;
+    top: 25%;
+    right: 5%;
+    z-index: $z-index-points;
+}
+
+.points__item {
+    margin-bottom: 6px;
+    &--active {
+        .points__link {
+            border-color: $red;
+        }
+    }
+}
+
+.points__link {
+    display: block;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $grey-text;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+
+// .points {
+//     margin-top: 87px;
+//     margin-right: 36px;    
+//     &__list {
+//         display: flex;
+//         flex-direction: column;   
+//         }        
+//     &__item {
+//         display: block;
+//         position: relative;
+//         margin-bottom: 15px;
+//     }            
+//     &__point {
+//         display: block;
+//         width: 6px;
+//         height: 6px;
+//         background-color: #7B7B7B;
+//         border-radius: 50%;        
+//         &:hover {
+//             background-color: #E01F3D;    
+//             &:after {
+//                 content: "";
+//                 display: block;
+//                 width: 14px;
+//                 height: 14px;
+//                 border-radius: 50%;
+//                 border: 1px solid $red;
+//                 position: absolute;
+//                 margin-top: -5px;
+//                 margin-left: -5px;
+//                 cursor: pointer;
+//             } 
+//         }
+//     }
+// }  

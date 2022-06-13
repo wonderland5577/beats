@@ -1,0 +1,51 @@
+.radio {
+    display: flex;
+    margin-bottom: 16px;
+    margin-right: 24px;
+    align-items: center;
+    cursor: pointer;
+    &:last-child {
+        margin-right: 0;
+    }
+    &__title {
+        color: white;
+    }
+
+    &__elem {
+        display: none;        
+        &:checked ~ .radio__visible::before {
+            display: block;
+        }
+    }
+
+    &__visible {
+        margin-right: 10px;
+        width: 26px;
+        height: 26px;
+        position: relative;
+        border-radius: 50%;
+        background: white;   
+        &:before {
+            content: "";
+            width: 14px;
+            height: 14px;
+            background: $red;
+            border-radius: 50%;
+            position: absolute;
+            display: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &--checkbox {
+        margin-bottom: 48px;
+        .radio__visible {
+            border-radius: 0;
+            &::before{
+                background: url('../images/checkmark.png');
+            }
+        }
+    }
+}

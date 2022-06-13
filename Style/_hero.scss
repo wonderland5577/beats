@@ -1,0 +1,55 @@
+.hero {    
+    background: url('../images/grey-bg.png');
+    height: 100vh;
+    min-height: 650px;
+    position: relative;
+    &::after {
+        content: url('../images/decor.png');
+        position: absolute;
+        right: 25%;
+        bottom: -20px;
+    }
+}
+
+.container__hero{
+    width: $containerWidth;
+    margin: 0 auto;
+    background: url('../images/earphones-main.png') right 0% center no-repeat;
+    padding: 24px 0 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero__content {
+    max-width: 35%;          
+    
+    .hero__title {
+        margin-bottom: 22px;            
+    }    
+    
+    .hero__text {
+        margin-bottom: 36px;
+        font-family: $font-second;
+        font-size: 21px;
+        line-height: 25px;
+    }
+}
+
+.title {
+    font-family: $font;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 52px;
+    text-transform: uppercase;
+    color: $black;   
+    &--white {
+        color: white;
+    } 
+}   

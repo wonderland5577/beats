@@ -1,0 +1,21 @@
+.advantage {
+    display: flex;
+    
+    &__item {
+        display: flex;
+        margin-right: 8px;
+    }        
+    
+    &__text {
+        display: block;
+        max-width: 114px;
+        font-size: 16px;
+    }        
+    
+    &__img {
+        width: 45px;
+        &:first-child {
+            margin-right: 11px;
+        }        
+    }
+}  

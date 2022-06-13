@@ -1,0 +1,21 @@
+$grey: #F5F5F5;
+$red: #E01F3D;
+$red-hover: #CA1B36;
+$black: #292929;
+$dark-grey: #9A9A9A;
+$grey-text: #666666;
+
+$font: 'Play', sans-serif;
+$font-second: 'Alegreya Sans', sans-serif;
+
+$containerWidth: 940px;
+
+// Z-INDEX MENU
+
+$z-index-points: 100;
+
+
+.container {
+    width: $containerWidth;
+    margin: 0 auto;
+}

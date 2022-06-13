@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 40px;
+    width: 915px;
+    margin: 0 auto;
+    font-family: $font-second;
+    font-size: 18px;
+    margin-bottom: 106px;
+}
+
+.menu {    
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        margin-right: 27px;        
+        &:last-child {
+            margin-right: 0px;
+        }
+    } 
+}
+
+.contacts {
+    font-family: $font;    
+    &__phone {
+        font-style: normal;
+        text-decoration: none;        
+        &::before {
+            content: url(../images/phone.png);
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            margin-right: 6px;
+        }
+    }
+}
