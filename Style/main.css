@@ -540,7 +540,7 @@
   border-radius: 0;
 }
 .radio--checkbox .radio__visible::before {
-  background: url("../images/checkmark.png");
+  background: url("../images/checkmark2.png");
 }
 
 body {
