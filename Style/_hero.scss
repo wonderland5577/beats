@@ -1,8 +1,6 @@
 .hero {    
     background: url('../images/grey-bg.png');
-    height: 100vh;
-    min-height: 650px;
-    position: relative;
+    padding: 24px 0 45px;
     &::after {
         content: url('../images/decor.png');
         position: absolute;
@@ -12,19 +10,9 @@
 }
 
 .container__hero{
-    width: $containerWidth;
-    margin: 0 auto;
     background: url('../images/earphones-main.png') right 0% center no-repeat;
-    padding: 24px 0 45px;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
     height: 100%;
-}
-
-.flexbox {
-    display: flex;
-    justify-content: space-between;
 }
 
 .hero__content {

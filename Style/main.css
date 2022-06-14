@@ -1,9 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Play:wght@400;700&display=swap");
 @import url("./normalize.css");
 @import url("./base.css");
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 960px;
+  min-height: 100%;
+  overflow: hidden;
+}
+
 .container {
   width: 940px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section {
+  height: 100vh;
+  min-height: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
 }
 
 .points__list {
@@ -92,9 +123,7 @@
 
 .hero {
   background: url("../images/grey-bg.png");
-  height: 100vh;
-  min-height: 650px;
-  position: relative;
+  padding: 24px 0 45px;
 }
 .hero::after {
   content: url("../images/decor.png");
@@ -104,30 +133,11 @@
 }
 
 .container__hero {
-  width: 940px;
-  margin: 0 auto;
   background: url("../images/earphones-main.png") right 0% center no-repeat;
-  padding: 24px 0 45px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100%;
-}
-
-.flexbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .hero__content {
@@ -206,22 +216,6 @@
   margin-right: 11px;
 }
 
-.container__why {
-  padding-top: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.why {
-  height: 100vh;
-  min-height: 640px;
-  position: relative;
-}
 .why::after {
   content: url("../images/triangle-decor.png");
   position: absolute;
@@ -309,28 +303,6 @@
   max-width: 247px;
 }
 
-.container__feedback {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.feedback {
-  position: relative;
-  height: 100vh;
-  min-height: 640px;
-  padding-top: 68px;
-}
 .feedback::after {
   content: url("../images/circle-decor.png");
   position: absolute;
@@ -395,16 +367,6 @@
 .order {
   background: url("../images/form-bg.png");
   background-size: cover;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-top: 250px;
-  position: relative;
 }
 .order__title {
   margin-bottom: 60px;

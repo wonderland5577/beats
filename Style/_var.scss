@@ -15,7 +15,28 @@ $containerWidth: 940px;
 $z-index-points: 100;
 
 
+.wrapper {
+	position: relative;
+	width: 100%;
+	min-width: $containerWidth + 20px;
+    min-height: 100%;
+    overflow: hidden;
+}
+
 .container {
     width: $containerWidth;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
+
+.section {
+    height: 100vh;
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+}
+

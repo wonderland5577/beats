@@ -13,11 +13,6 @@
 .order {
     background: url('../images/form-bg.png');
     background-size: cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding-top: 250px;
-    position: relative;
     &__title {
         margin-bottom: 60px;
         text-align: center;
@@ -29,6 +24,7 @@
         top: -20px;
     }
 }
+
 
 .form {
     display: flex;
