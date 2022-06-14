@@ -37,6 +37,18 @@
   position: relative;
 }
 
+.title {
+  font-family: "Play", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52px;
+  text-transform: uppercase;
+  color: #292929;
+}
+.title--white {
+  color: white;
+}
+
 .points__list {
   position: fixed;
   top: 25%;
@@ -122,8 +134,10 @@
 }
 
 .hero {
-  background: url("../images/grey-bg.png");
+  background: url("../images/earphones-main.png") right 30% center no-repeat;
+  background-color: #F5F5F5;
   padding: 24px 0 45px;
+  position: relative;
 }
 .hero::after {
   content: url("../images/decor.png");
@@ -133,7 +147,6 @@
 }
 
 .container__hero {
-  background: url("../images/earphones-main.png") right 0% center no-repeat;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -151,18 +164,6 @@
   font-family: "Alegreya Sans", sans-serif;
   font-size: 21px;
   line-height: 25px;
-}
-
-.title {
-  font-family: "Play", sans-serif;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 52px;
-  text-transform: uppercase;
-  color: #292929;
-}
-.title--white {
-  color: white;
 }
 
 .button {

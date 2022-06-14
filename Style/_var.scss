@@ -36,7 +36,18 @@ $z-index-points: 100;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     position: relative;
 }
+
+.title {
+    font-family: $font;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 52px;
+    text-transform: uppercase;
+    color: $black;   
+    &--white {
+        color: white;
+    } 
+}   
 
