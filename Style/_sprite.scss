@@ -64,8 +64,13 @@ svg {
     &__text {
         margin-bottom: rem(3px);
 
+        @include tablets {
+            font-size: 21px;
+        }
+        
         @include phones {
             margin-bottom: rem(12px);
+            font-size: 18px;
         }
     }
 }
@@ -75,7 +80,12 @@ svg {
         color: $red;
     }
 
+    @include tablets {
+        font-size: 18px;
+    }
+    
     @include phones {
         margin-bottom: rem(19px);
+        font-size: 16px;
     }
 }

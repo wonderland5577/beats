@@ -9,6 +9,10 @@
         outline: none;
     }
 
+    @include tablets {
+        padding: rem(3px);
+    }
+    
     @include phones {
         padding: rem(3px);
     }
@@ -20,6 +24,10 @@
     &__title {
         margin-bottom: 6.0rem;
         text-align: center;
+
+        @include tablets {
+            margin-bottom: rem(30px);
+        }
     }
     &::before {
         content: url('../images/5angle.png');
@@ -35,7 +43,7 @@
 
     @include tablets {
         flex-direction: column;
-        padding: 0 15%;
+        padding: 0 17%;
     }
     
     @include phones {
@@ -45,6 +53,10 @@
     &__title {
         color: white;
         margin-bottom: .6rem;
+
+        @include tablets {
+            margin-bottom: rem(0px);
+        }
     }    
     &__col {
         flex: 1;
@@ -72,12 +84,20 @@
     &__input {
         @include form__input;
         width: 100%;
+
+        @include tablets {
+            margin-bottom: rem(14px);
+        }
     }
     &__input--textarea {
         @include form__input;
         height: 15.2rem;
         resize: none;
         margin-bottom: 2.6rem;
+
+        @include tablets {
+            height: rem(80px);
+        }
     }
     &__controls {
         display: flex;
