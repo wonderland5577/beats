@@ -3,19 +3,23 @@
     
     &__item {
         display: flex;
-        margin-right: 8px;
+        margin-right: 0.8rem;
     }        
     
     &__text {
         display: block;
-        max-width: 114px;
-        font-size: 16px;
+        max-width: 11.4rem;
+        font-size: 1.6rem;
     }        
     
     &__img {
-        width: 45px;
+        width: 4.5rem;
         &:first-child {
-            margin-right: 11px;
+            margin-right: 1.1rem;
         }        
     }
-}  
+
+    @include tablets {
+        display: none;
+    }
+}

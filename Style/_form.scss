@@ -1,12 +1,16 @@
 @mixin form__input {
     display: block;
     border: none;
-    padding: 17px 11px;
-    border-radius: 4px;
-    border: solid 3px transparent;
+    padding: 1.7rem 1.1rem;
+    border-radius: .4rem;
+    border: solid .3rem transparent;
     &:focus {
-        border: solid 3px $red;
+        border: solid .3rem $red;
         outline: none;
+    }
+
+    @include phones {
+        padding: rem(3px);
     }
  }
 
@@ -14,38 +18,52 @@
     background: url('../images/form-bg.png');
     background-size: cover;
     &__title {
-        margin-bottom: 60px;
+        margin-bottom: 6.0rem;
         text-align: center;
     }
     &::before {
         content: url('../images/5angle.png');
         position: absolute;
         right: 10%;
-        top: -20px;
+        top: -2.0rem;
     }
 }
 
 
 .form {
     display: flex;
+
+    @include tablets {
+        flex-direction: column;
+        padding: 0 15%;
+    }
+    
+    @include phones {
+        padding: 0 1%;
+    }
+
     &__title {
         color: white;
-        margin-bottom: 6px;
+        margin-bottom: .6rem;
     }    
     &__col {
         flex: 1;
-        margin-right: 26px;
+        margin-right: 2.6rem;
         &:last-child {
+            margin-right: 0;
+        }
+
+        @include tablets {
             margin-right: 0;
         }
     }
     &__row {
         display: flex;
-        margin-bottom: 10px;
+        margin-bottom: 1.0rem;
     }
     &__block {
         flex: 1;
-        margin-right: 20px;
+        margin-right: 2.0rem;
         &:last-child {
             margin-right: 0;
         }
@@ -57,16 +75,24 @@
     }
     &__input--textarea {
         @include form__input;
-        height: 152px;
+        height: 15.2rem;
         resize: none;
-        margin-bottom: 26px;
+        margin-bottom: 2.6rem;
     }
     &__controls {
         display: flex;
         flex-wrap: wrap;
+
+        @include phones {
+            justify-content: center;
+        }
     }
     &__btn {
         display: flex;
+
+        @include tablets {
+            justify-content: center;
+        }   
     }
 }
 

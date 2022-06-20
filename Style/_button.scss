@@ -1,23 +1,23 @@
 .button {
     display: block;
-    width: 163px;
-    height: 54px;
+    width: 16.3rem;
+    height: 5.4rem;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 700;
-    border-radius: 100px;
+    border-radius: 10.0rem;
     
     &--red {
         background-color: $red;
         color: white;
-        margin-bottom: 70px;   
+        margin-bottom: 7.0rem;   
         &:hover {
             background-color: $red-hover;
         }
     }
 
     &--black {
-        width: 100px;
+        width: 10.0rem;
         background-color: transparent;
         text-transform: none;
         color: white;

@@ -3,35 +3,59 @@
         content: url('../images/circle-decor.png');
         position: absolute;
         left: 18%;
-        bottom: -20px;    
+        bottom: -2.0rem;    
     }
 
     &__title {
         text-align: center;
-        margin-bottom: 32px;
+        margin-bottom: 3.2rem;
     }    
     &__content {
         display: flex;
         background: url(../images/feedback-bg.png);
-        max-height: 348px;
-        margin-bottom: 15px;
+        margin-bottom: rem(15px);
+
+        @include tablets {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: rem(40px) 0;
+        }   
     }    
     &__photo {
-        padding: 40px;
-    }    
+        padding: rem(40px);
+        @include tablets {
+            width: 25%;
+            padding: 0;
+        }
+
+        @include phones {
+            width: 30%;
+        }
+    }
+    &__desc {
+        @include tablets {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
     &__caption {
-        margin-top: 74px;
-        margin-bottom: 27px;
-        font-size: 24px;
+        margin-top: 7.4rem;
+        margin-bottom: 2.7rem;
+        font-size: 2.4rem;
         font-weight: bold;
+        @include tablets {
+            margin-top: rem(32px);
+        }
     }
     &__text {
-        font-size: 16px;
-        margin-bottom: 38px;
-        max-width: 498px;
+        font-size: 1.6rem;
+        margin-bottom: 3.8rem;
+        max-width: 49.8rem;
     }
     &__name {
-        font-size: 18px;
+        font-size: 1.8rem;
         font-weight: bold;
     }
 
@@ -40,7 +64,7 @@
     display: flex;
     justify-content: center;
     &__item {
-        margin-right: 5px;
+        margin-right: .5rem;
         &:last-child {
             margin-right: 0;
         }
@@ -50,10 +74,10 @@
 .icon__link {
     &:hover {
         display: block;
-        border: 4px solid $red;
+        border: .4rem solid $red;
         outline: none;
-        width: 73px;
-        height: 73px;
-        border-radius: 100px;
+        width: 7.3rem;
+        height: 7.3rem;
+        border-radius: 10.0rem;
     }
 }

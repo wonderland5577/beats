@@ -21,6 +21,7 @@
                                 <img src="images/logo.png" alt="Лого" class="logo__img">
                             </a>
                         </div>
+
                         <nav class="menu">
                             <ul class="menu__list">
                                 <li class="menu__item">
@@ -46,9 +47,17 @@
                                 </li>
                             </ul>
                         </nav>
-                        <div class="contacts">
-                            <a href="tel:+78009039090" class="contacts__phone">8 800 903 90 90</a>
+
+                        <div class="contacts header__contacts">
+                            <a href="tel:+78009039090" class="contacts__phone contacts__phone-header">8 800 903 90 90</a>
                         </div>
+
+                        <a href="" class="hamburger">
+                            <span class="hamburger__plank"></span>
+                            <span class="hamburger__plank"></span>
+                            <span class="hamburger__plank"></span>
+                        </a>
+
                     </header>
                     <div class="hero__content">
                         <div class="hero__title">
@@ -100,7 +109,9 @@
                     <div class="spec__list">
                         <ul class="spec">
                             <li class="spec__item">
-                                <img src="images/battery-2.png" alt="" class="spec__img-center--first">
+                                <div class="spec__image">
+                                    <div class="spec__image-wrapper"><img src="images/battery-2.png" alt="" class="spec__img-center spec__img-center--first"></div>
+                                </div>
                                 <div class="spec__content">
                                     <div class="spec__title">40 часов работы</div>
                                     <div class="spec__text">
@@ -112,7 +123,9 @@
                                 </div>
                             </li>
                             <li class="spec__item">
-                                <img src="images/loud-2.png" alt="" class="spec__img-center">
+                                <div class="spec__image">
+                                    <div class="spec__image-wrapper"><img src="images/loud-2.png" alt="" class="spec__img-center"></div>
+                                </div>
                                 <div class="spec__content">
                                     <div class="spec__title">Фирменное звучание</div>
                                     <div class="spec__text">
@@ -124,7 +137,11 @@
                                 </div>
                             </li>
                             <li class="spec__item">
-                                <img src="images/clock-2.png" alt="" class="spec__img-center">
+                                <div class="spec__image">
+                                    <div class="spec__image-wrapper">
+                                        <img src="images/clock-2.png" alt="" class="spec__img-center">
+                                    </div>
+                                </div>
                                 <div class="spec__content">
                                     <div class="spec__title">Быстрая зарядка</div>
                                     <div class="spec__text">
@@ -247,6 +264,51 @@
                             </div>
                         </div>
                     </div>
+            </section>
+
+            <section class="section footer">
+
+                    <div class="footer__content">
+                        <address class="address">
+                            <div class="address__text">Москва, ул.Новый Арбат, д.31/12</div>
+                            <div class="contacts footer__contacts">
+                                <a href="tel:+78009039090" class="contacts__phone contacts__phone-header">8 800 903 90 90</a>
+                            </div>
+                        </address>
+                        <div class="socials">
+                            <ul class="socials__menu">
+                                <li class="socials__item">
+                                    <a href="" class="socials__link">
+                                        <svg class="icon">
+                                            <use xlink:href="sprite.svg#vk"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="socials__item">
+                                    <a href="" class="socials__link">
+                                        <svg class="icon">
+                                            <use xlink:href="sprite.svg#fb"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="socials__item">
+                                    <a href="" class="socials__link">
+                                        <svg class="icon">
+                                            <use xlink:href="sprite.svg#in"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="socials__item">
+                                    <a href="" class="socials__link">
+                                        <svg class="icon">
+                                            <use xlink:href="sprite.svg#tg"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
             </section>
 
         </div>

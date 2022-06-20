@@ -3,21 +3,28 @@
         content: url('../images/triangle-decor.png');
         position: absolute;
         left: 10%;
-        bottom: -10px;        
+        bottom: -1.0rem;        
     }
 
     &__header {
         align-self: center;
+
+        @include phones {
+        }
     }
 
     &__title {
-        margin-bottom: 18px;
+        margin-bottom: 1.8rem;
+        text-align: center;
     }    
     &__text {
         display: inline-block;
-        width: 590px;
-        margin-bottom: 92px;
+        margin-bottom: 9.2rem;
         text-align: center;
+
+        @include tablets {
+            padding: 0 1%;
+        }
     }
 }
 
@@ -25,52 +32,115 @@
     display: flex;
     justify-content: space-between; 
     width: 100%;
+
+    @include phones {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__image-wrapper {
+        display: inline-block;
+        width: rem(126px);
+        height: rem(126px);
+        position: relative;
+        background: $grey;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: rem(24px);
+
+        @include phones {
+            margin-right: rem(12px);
+            margin-bottom: 0;
+        }
+    }
+
     &__item {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-right: 25px;
-        max-width: 276px;
-        position: relative;        
-        &::after {
-            content: url(../images/dots.png);
-            position: absolute;
-            bottom: 195px;
-            left: 240px;    
+        position: relative;    
+        
+        margin-right: 5%;
+
+        &:last-child {
+            margin-right: 0;
         }
-        &:last-child::after {
-            content: "";
+
+        @include tablets {
+            margin-right: 1%;
+
+            &:last-child {
+                margin-right: 0;
+            }
         }
-        &::before {
-            content: "";
-                display: block;
-                width: 128px;
-                height: 128px;
-                border-radius: 50%;
-                background: #F2F5F4;
-                position: absolute;
-                top: 14%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                z-index: -1;
+        
+        @include phones {
+            flex-direction: row;
+            // margin-right: 0;
+            align-items: center;
+            margin-bottom: rem(30px);
+            // justify-content: center;
+
+        }
+        
+        // &::after {
+        //     content: url(../images/dots.png);
+        //     position: absolute;
+        //     bottom: 77%;
+        //     left: 100%;    
+        // }
+        // &:last-child::after {
+        //     content: "";
+        // }
+
+        @include tablets {
+            &::after {
+                display: none;
+            }
         }
     }    
     &__img-center {
-        margin-bottom: 54px;  
+        width: rem(56px);
+        height: rem(60px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
         &--first {
-            margin-bottom: 61px;
-        }   
-    } 
+            width: rem(32px);
+        }
+    }
+    
     &__title {
-        font-size: 24px;
+        font-size: 2.4rem;
         font-weight: bold;
-        margin-bottom: 7px;
+        margin-bottom: .7rem;
         text-align: center;
+        
+        @include phones {
+            text-align: start;
+        }
     }    
+    
+    
     &__text {
         color: $grey-text;
-        font-size: 16px;
+        font-size: 1.6rem;
         text-align: center;
-        max-width: 247px;
+        
+        @include tablets {
+            // width: 80%;
+        }
+        
+        @include phones {
+            text-align: start;
+        }
+        
+        // @include phones {
+        //     font-size: rem(16px);
+        //     text-align: left;
+        //     margin-left: rem(60px);
+        // }
     }
 }

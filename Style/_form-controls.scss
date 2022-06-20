@@ -1,7 +1,7 @@
 .radio {
     display: flex;
-    margin-bottom: 16px;
-    margin-right: 24px;
+    margin-bottom: 1.6rem;
+    margin-right: 2.4rem;
     align-items: center;
     cursor: pointer;
     &:last-child {
@@ -19,16 +19,16 @@
     }
 
     &__visible {
-        margin-right: 10px;
-        width: 26px;
-        height: 26px;
+        margin-right: 1.0rem;
+        width: 2.6rem;
+        height: 2.6rem;
         position: relative;
         border-radius: 50%;
         background: white;   
         &:before {
             content: "";
-            width: 14px;
-            height: 14px;
+            width: 1.4rem;
+            height: 1.4rem;
             background: $red;
             border-radius: 50%;
             position: absolute;
@@ -40,7 +40,7 @@
     }
 
     &--checkbox {
-        margin-bottom: 48px;
+        margin-bottom: 4.8rem;
         .radio__visible {
             border-radius: 0;
             &::before{

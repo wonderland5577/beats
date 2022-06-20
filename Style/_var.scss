@@ -4,27 +4,38 @@ $red-hover: #CA1B36;
 $black: #292929;
 $dark-grey: #9A9A9A;
 $grey-text: #666666;
+$baseFont-size: 10px;
 
 $font: 'Play', sans-serif;
 $font-second: 'Alegreya Sans', sans-serif;
 
-$containerWidth: 940px;
+$containerWidth: 94.0rem;
+
+// BREAK POINTS
+
+$tablets: 768px;
+$phones: 480px;
 
 // Z-INDEX MENU
 
 $z-index-points: 100;
 
+body {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Play', sans-serif;
+    color: $black;
+}
 
 .wrapper {
 	position: relative;
 	width: 100%;
-	min-width: $containerWidth + 20px;
     min-height: 100%;
     overflow: hidden;
 }
 
 .container {
-    width: $containerWidth;
+    max-width: $containerWidth;
+    width: 95%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -32,7 +43,7 @@ $z-index-points: 100;
 
 .section {
     height: 100vh;
-    min-height: 650px;
+    min-height: 65.0rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,13 +52,22 @@ $z-index-points: 100;
 
 .title {
     font-family: $font;
-    font-size: 48px;
+    font-size: 4.8rem;
     font-weight: 700;
-    line-height: 52px;
+    line-height: 5.2rem;
     text-transform: uppercase;
     color: $black;   
     &--white {
         color: white;
     } 
+
+    @include tablets {
+        font-size: rem(48px);
+    }
+
+    @include phones {
+        font-size: rem(32px);
+        line-height: rem(36px);
+    }
 }   
 
