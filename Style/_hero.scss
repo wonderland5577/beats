@@ -1,6 +1,6 @@
 .hero {    
     background: url('../images/earphones-main.png') right 20% center no-repeat;
-    background-size: 43%;
+    background-size: 38%;
     background-color: $grey;
     padding: 2.4rem 0 4.5rem;
     position: relative;
@@ -13,7 +13,7 @@
     }
    
     @include tablets {
-        background-size: 30%;
+        background-size: 40%;
         background-position: top 20% center;
     }
 

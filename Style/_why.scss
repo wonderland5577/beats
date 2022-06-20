@@ -75,6 +75,7 @@
         
         @include phones {
             flex-direction: row;
+            width: 95%;
             align-items: center;
             margin-bottom: rem(30px);
         }
@@ -118,6 +119,7 @@
         
         @include phones {
             text-align: start;
+            margin-bottom: rem(6px);
         }
     }       
     
