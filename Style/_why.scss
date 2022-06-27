@@ -1,8 +1,10 @@
 .why {
     &::after {
+        content: url('../images/triangle-decor.png');
         position: absolute;
         left: 10%;
-        bottom: -1.0rem;        
+        bottom: rem(-20px);        
+        z-index: 10;
     }
 
     &__header {

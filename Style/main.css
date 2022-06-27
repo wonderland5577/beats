@@ -131,7 +131,7 @@ img {
 .points__list {
   position: fixed;
   top: 25%;
-  right: 5%;
+  right: 0.5%;
   z-index: 100;
 }
 
@@ -242,6 +242,264 @@ img {
       flex-shrink: 0;
 }
 
+.arrow {
+  font-size: 30px;
+  font-weight: 2px;
+}
+@media screen and (max-width: 768px) {
+  .arrow {
+    top: 20%;
+  }
+}
+.arrow--left {
+  position: absolute;
+  left: 0;
+}
+@media screen and (max-width: 768px) {
+  .arrow--left {
+    left: 15%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .arrow--left {
+    left: 2%;
+  }
+}
+.arrow--right {
+  position: absolute;
+  right: 0;
+}
+@media screen and (max-width: 768px) {
+  .arrow--right {
+    right: 15%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .arrow--right {
+    right: 2%;
+  }
+}
+
+.slider {
+  background-color: #F5F5F5;
+  position: relative;
+}
+.slider::after {
+  content: url("../images/slider-decor.png");
+  position: absolute;
+  bottom: -20px;
+  right: 15%;
+  z-index: 10;
+}
+.slider__container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .slider__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 93%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .slider__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.slider__left-col {
+  margin-right: 5.9rem;
+}
+@media screen and (max-width: 768px) {
+  .slider__left-col {
+    margin-right: 0;
+  }
+}
+.slider__photo1 {
+  display: block;
+  width: 100rem;
+}
+@media screen and (max-width: 768px) {
+  .slider__photo1 {
+    width: 25rem;
+    margin-bottom: 5rem;
+  }
+}
+.slider__title {
+  margin-bottom: 2.4rem;
+  font-size: 36px;
+  line-height: 41.5px;
+}
+@media screen and (max-width: 768px) {
+  .slider__title {
+    margin-bottom: 1.4rem;
+    text-align: center;
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+.slider__text {
+  margin-bottom: 2.7rem;
+  font-size: 16px;
+  line-height: 18.5px;
+}
+@media screen and (max-width: 768px) {
+  .slider__text {
+    text-align: center;
+    font-size: 16px;
+    bottom: 2.7rem;
+  }
+}
+.slider__price {
+  font-size: 36px;
+  margin-right: 1.3rem;
+}
+@media screen and (max-width: 768px) {
+  .slider__price {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .slider__price {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .offer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.offer .slider__button {
+  margin-bottom: 0;
+}
+
+.attributes__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2.4rem;
+}
+@media screen and (max-width: 768px) {
+  .attributes__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.attributes__item {
+  margin-right: 7.5rem;
+}
+.attributes__item:last-child {
+  margin-right: 0;
+}
+
+.attributes__item-desc {
+  font-weight: bold;
+}
+
+.offer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dropdown {
+  width: 9.1rem;
+  height: 9.1rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+.dropdown:hover .dropdown__img {
+  display: block;
+}
+.dropdown__pic {
+  margin-bottom: 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  .dropdown {
+    display: none;
+  }
+}
+.dropdown__block {
+  width: 27.3rem;
+  height: 29.4rem;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 9.1rem;
+}
+.dropdown__item {
+  padding: 0 6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2.8rem;
+  color: black;
+}
+.dropdown__item:last-child {
+  margin-bottom: 0;
+}
+.dropdown__item-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.dropdown__pic {
+  margin-right: 2rem;
+}
+.dropdown__pic:hover ~ .dropdown__img {
+  display: block;
+}
+.dropdown__img {
+  display: none;
+  position: absolute;
+  max-width: 35rem;
+  max-height: 40rem;
+  top: 0;
+  left: 9.1rem;
+}
+
 .hero {
   background: url("../images/earphones-main.png") right 20% center no-repeat;
   background-size: 35%;
@@ -254,6 +512,7 @@ img {
   position: absolute;
   right: 25%;
   bottom: -2rem;
+  z-index: 10;
 }
 @media screen and (max-width: 768px) {
   .hero {
@@ -392,9 +651,11 @@ img {
 }
 
 .why::after {
+  content: url("../images/triangle-decor.png");
   position: absolute;
   left: 10%;
-  bottom: -1rem;
+  bottom: -2rem;
+  z-index: 10;
 }
 .why__header {
   -ms-flex-item-align: center;
@@ -881,6 +1142,9 @@ img {
     display: -ms-inline-flexbox;
     display: inline-flex;
   }
+  .hamburger:active .hidden {
+    display: block;
+  }
 }
 
 .hamburger__plank {
@@ -894,11 +1158,13 @@ img {
   background: #292929;
   font-size: 36px;
   color: white;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 100;
+  display: none;
 }
 
 .hamburger__menu {
@@ -938,6 +1204,7 @@ img {
   top: 2rem;
   right: 2rem;
 }
+
 .cross__plank {
   display: block;
   background: white;
@@ -947,12 +1214,10 @@ img {
 .cross__plank--1 {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  background-color: aqua;
 }
 .cross__plank--2 {
-  top: -4px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 
 svg {

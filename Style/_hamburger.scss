@@ -7,7 +7,12 @@
     
     @include tablets {
         display: inline-flex;
+        &:active .hidden {
+            display: block;
+        }
     }
+
+
 }
 
 .hamburger__plank {
@@ -24,12 +29,14 @@
     background: #292929;
     font-size: 36px;
     color: white;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    // display: none;
+    z-index: 100;
+    
+    display: none;
 }
 
 .hamburger__menu {
@@ -51,11 +58,6 @@
     position: absolute;
     top: rem(20px);
     right: rem(20px);
-    // display: none;
-    
-    @include tablets {
-        // display: inline-flex;
-    }
 }
 
 .cross__plank {
@@ -66,12 +68,10 @@
     
     &--1 {
         transform: rotate(45deg);
-        background-color: aqua;
     }
     
     &--2 {
-        top: -4px;
-        transform: rotate(-45deg);
+        transform: rotate(135deg);
     }
 }
 

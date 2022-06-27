@@ -10,6 +10,7 @@
         position: absolute;
         right: 25%;
         bottom: -2.0rem;
+        z-index: 10;
     }
    
     @include tablets {
