@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const workers = [
+        {"name":"John","salary":500},
+        {"name":"Mike","salary":1300},
+        {"name":"Linda","salary":1500}]
+            
+        function getWorthyWorkers(array) {
+        let arr = [];
+        for (let i=0; i<array.length; i++) {
+            if (array[i].salary > 1000) {
+            arr.push(array[i].name);
+            }
+        }
+            return arr;
+        }
+        console.log(getWorthyWorkers(workers));
+    </script>
+</body>
+</html>

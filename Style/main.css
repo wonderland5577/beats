@@ -890,6 +890,71 @@ img {
   border-radius: 10px;
 }
 
+.hidden {
+  background: #292929;
+  font-size: 36px;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hamburger__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.hamburger__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cross {
+  width: 24px;
+  height: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+.cross__plank {
+  display: block;
+  background: white;
+  height: 4px;
+  border-radius: 10px;
+}
+.cross__plank--1 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: aqua;
+}
+.cross__plank--2 {
+  top: -4px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 svg {
   width: 3rem;
   height: 3rem;

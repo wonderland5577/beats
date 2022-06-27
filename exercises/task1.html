@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const string = "Привет! Как дела?";
+        function getVowels(a) {
+        let arr = "";
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] == "и" || a[i] == "е" || a[i] == "а" || a[i] == "о" || a[i] == "у" || a[i] == "э" || a[i] == "ю" || a[i] == "я") {
+            arr += a[i];
+            }
+        }
+        return arr;
+        }
+        console.log(getVowels(string));
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./modal.css" />
+    <title>Modal</title>
+  </head>
+  <body>
+    <div class="container">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem magnam
+        ratione quasi alias adipisci molestias doloribus, provident eum natus
+        rerum, numquam delectus cum at nobis consectetur deserunt perspiciatis
+        eveniet temporibus.
+      </p>
+      <button class="btn" id="openOverlay">открыть</button>
+    </div>
+    <script>
+        const openButton = document.querySelector("#openOverlay");
+        const body = document.body;
+        const successModal = createModal("Hello, world!");
+
+        openButton.addEventListener("click", (e) => {
+        body.appendChild(successModal);
+        });
+
+        function createModal(content) {
+        const overlayElement = document.createElement("div");
+        overlayElement.classList.add("overlay");
+
+        overlayElement.addEventListener("click", (e) => {
+            if (!e.target.classList.contains("content")) {
+            closeElement.click();
+            }
+        });
+
+        const containerElement = document.createElement("div");
+        containerElement.classList.add("modal-container");
+
+        const contentElement = document.createElement("div");
+        contentElement.classList.add("content");
+
+        contentElement.innerHTML = content;
+
+        const closeElement = document.createElement("a");
+        closeElement.classList.add("close");
+        closeElement.textContent = "x";
+        closeElement.href = "#";
+
+        closeElement.addEventListener("click", (e) => {
+            e.preventDefault();
+            body.removeChild(overlayElement);
+        });
+
+        overlayElement.appendChild(containerElement);
+        containerElement.appendChild(closeElement);
+        containerElement.appendChild(contentElement);
+
+        return overlayElement;
+        }
+    </script>
+    <!-- <script src="./modalTemplate.js"></script> -->
+  </body>
+</html>
