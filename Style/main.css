@@ -522,7 +522,7 @@ img {
 }
 @media screen and (max-width: 480px) {
   .hero {
-    background-size: 70%;
+    background-size: 60%;
   }
 }
 
@@ -541,7 +541,7 @@ img {
 }
 @media screen and (max-width: 768px) {
   .hero__content .hero__title {
-    padding-top: 50%;
+    padding-top: 35%;
     padding-left: 5%;
     padding-right: 5%;
     margin-bottom: 0.5rem;
@@ -551,6 +551,7 @@ img {
   .hero__content .hero__title {
     padding-left: 15%;
     padding-right: 15%;
+    padding-top: 50%;
   }
 }
 .hero__content .hero__text {
@@ -665,6 +666,16 @@ img {
 .why__title {
   margin-bottom: 1.8rem;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .why__title {
+    padding-top: 15%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .why__title {
+    padding-top: 15%;
+  }
 }
 .why__text {
   display: inline-block;
@@ -1150,8 +1161,8 @@ img {
 .hamburger__plank {
   display: block;
   background: #292929;
-  height: 4px;
-  border-radius: 10px;
+  height: 0.4rem;
+  border-radius: 1rem;
 }
 
 .hidden {
@@ -1165,6 +1176,10 @@ img {
   height: 100%;
   z-index: 100;
   display: none;
+}
+
+.hidden--active {
+  display: block;
 }
 
 .hamburger__menu {
@@ -1188,6 +1203,7 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-top: 40%;
 }
 
 .cross {
@@ -1327,4 +1343,62 @@ svg:hover {
     margin-bottom: 1.9rem;
     font-size: 16px;
   }
+}
+
+.team__title {
+  margin-bottom: 5.3rem;
+  text-align: center;
+}
+
+.team__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 2rem;
+}
+.team__list:last-child {
+  margin-right: 0;
+}
+
+.member {
+  max-width: 22rem;
+}
+.member__photo {
+  margin-bottom: 2.5rem;
+}
+.member__name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 12%;
+  margin-bottom: 1.1rem;
+}
+.member__name::after {
+  content: url("../images/tri.png");
+  margin-left: 0.4rem;
+}
+.member__role {
+  font-size: 16px;
+  text-align: center;
+  color: black;
+  margin-bottom: 0.4rem;
+}
+.member__job-desc {
+  text-align: center;
+  color: #666666;
+}
+
+.member__desc {
+  overflow: hidden;
+  height: 0;
+}
+
+.member__content {
+  padding-bottom: 0.5rem;
+}
+
+.member__details {
+  background-color: transparent;
 }

@@ -19,7 +19,7 @@
     }
 
     @include phones {
-        background-size: 70%;
+        background-size: 60%;
     }
 }
 
@@ -35,7 +35,7 @@
         margin-bottom: 2.2rem;      
         
         @include tablets {
-            padding-top: 50%;
+            padding-top: 35%;
             padding-left: 5%;
             padding-right: 5%;
             margin-bottom: rem(5px);
@@ -44,6 +44,7 @@
         @include phones {
             padding-left: 15%;
             padding-right: 15%;
+            padding-top: 50%;
         }
     }    
     .hero__text {

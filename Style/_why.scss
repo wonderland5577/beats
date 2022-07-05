@@ -17,6 +17,14 @@
     &__title {
         margin-bottom: 1.8rem;
         text-align: center;
+
+        @include tablets {
+            padding-top: 15%;
+        }
+
+        @include phones {
+            padding-top: 15%;
+        }
     }    
     &__text {
         display: inline-block;
@@ -87,8 +95,8 @@
             bottom: 77%;
             left: 100%;    
         }
-        &:last-child::after {
-        }
+        // &:last-child::after {
+        // }
 
         @include tablets {
             &::after {

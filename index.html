@@ -11,7 +11,7 @@
 <body>
 
     <div class="wrapper">
-        <div class="maincontent">
+        <div class="maincontent">       
 
             <section class="section hero">
                 <div class="container container__hero">
@@ -52,7 +52,7 @@
                             <a href="tel:+78009039090" class="contacts__phone contacts__phone-header">8 800 903 90 90</a>
                         </div>
 
-                        <a href="" class="hamburger">
+                        <a href="" class="hamburger" type="button">
                             <span class="hamburger__plank"></span>
                             <span class="hamburger__plank"></span>
                             <span class="hamburger__plank"></span>
@@ -243,6 +243,59 @@
                 </div>
             </section>
 
+
+            <section class="section team">
+                <div class="container">
+                    <h1 class="title team__title">команда</h1>
+                    <ul class="team__list">
+
+                        <li class="team__item member">
+                            <img src="images/member1.png" alt="member1" class="member__photo">
+                            <a href="" class="member__name">Борис Федорович</a>
+                            <div class="member__desc">
+                                <div class="member__content">
+                                    <div class="member__role">Главный технолог</div>
+                                    <div class="member__job-desc">Отвечает за вкусовые качества и калорийность.</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="team__item member">
+                            <img src="images/member2.png" alt="member" class="member__photo">
+                            <a href="" class="member__name">Борис Федорович</a>
+                            <div class="member__desc">
+                                <div class="member__content">
+                                    <div class="member__role">Главный технолог</div>
+                                    <div class="member__job-desc">Отвечает за вкусовые качества и калорийность.</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="team__item member">
+                            <img src="images/member3.png" alt="member" class="member__photo">
+                            <a href="" class="member__name">Борис Федорович</a>
+                            <div class="member__desc">
+                                <div class="member__content">
+                                    <div class="member__role">Главный технолог</div>
+                                    <div class="member__job-desc">Отвечает за вкусовые качества и калорийность.</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="team__item member">
+                            <img src="images/member4.png" alt="member" class="member__photo">
+                            <a href="" class="member__name">Борис Федорович</a>
+                            <div class="member__desc">
+                                <div class="member__content">
+                                    <div class="member__role">Главный технолог</div>
+                                    <div class="member__job-desc">Отвечает за вкусовые качества и калорийность.</div>
+                                </div>
+                            </div>
+                        </li>                     
+                    </ul>
+                </div>
+            </section>
+
             <section class="section feedback">
                 <div class="container">
                     <h1 class="title feedback__title">ОТЗЫВЫ</h1>
@@ -352,7 +405,6 @@
             </section>
 
             <section class="section footer">
-
                     <div class="footer__content">
                         <address class="address">
                             <div class="address__text">Москва, ул.Новый Арбат, д.31/12</div>
@@ -392,8 +444,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                
+                    </div>                
             </section>
 
         </div>
@@ -451,8 +502,7 @@
 
         <div class="hidden section">
             <a href="" class="cross">
-                <span class="cross__plank cross__plank--1"></span>
-                <span class="cross__plank cross__plank--2"></span>
+                <img src="/images/close.png" alt="" class="close">
             </a>
             <nav class="menu hamburger__menu">
                 <ul class="menu__list hamburger__list">
@@ -481,4 +531,24 @@
             </nav>
         </div>
 </body>
+
+<script src="JS/team.js"></script>
+
+<script>
+    const hiddenShow = document.querySelector('.hamburger');
+    const closeHiddenMenu = document.querySelector('.cross');
+    const hiddenMenu = document.querySelector('.hidden');
+    
+    hiddenShow.addEventListener('click', function(e) {
+        e.preventDefault();
+        hiddenMenu.classList.add('hidden--active');
+    })
+
+    closeHiddenMenu.addEventListener('click', function(e) {
+        e.preventDefault();
+        hiddenMenu.classList.remove('hidden--active');
+    })
+
+</script>
+
 </html>

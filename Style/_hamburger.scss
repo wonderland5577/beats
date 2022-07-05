@@ -9,17 +9,15 @@
         display: inline-flex;
         &:active .hidden {
             display: block;
-        }
+        }        
     }
-
-
 }
 
 .hamburger__plank {
     display: block;
     background: $black;
-    height: 4px;
-    border-radius: 10px;
+    height: rem(4px);
+    border-radius: rem(10px);
 }
 
 // =============================================================
@@ -39,6 +37,10 @@
     display: none;
 }
 
+.hidden--active {
+    display: block;
+}
+
 .hamburger__menu {
     display: flex;
     flex-direction: column;
@@ -48,6 +50,7 @@
 .hamburger__list {
     display: flex;
     flex-direction: column;
+    padding-top: 40%;
 }
 
 .cross {
