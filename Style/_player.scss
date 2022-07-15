@@ -1,0 +1,198 @@
+.player {
+  background: #f8faf9;
+
+  &__title {
+    text-align: center;
+    padding-top: rem(58px);
+    margin-bottom: rem(44px);
+  }
+}
+
+.player__container {
+  width: rem(660px);
+  height: rem(405px); 
+  margin: 0 auto;
+  position: relative;
+
+  @include tablets {
+    width: rem(480px);
+    height: rem(350px);
+  }
+
+  @include phones {
+    width: rem(394px);
+    height: rem(233px);
+  }
+
+}
+
+.player {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.player__splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../images/splash.png") center center / cover no-repeat;
+  cursor: pointer;
+
+  &:before {
+    content: url("../images/play_big.png");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.player__wrapper {
+  height: 100%;
+  &.active .player__splash {
+    display: none;
+  }
+}
+
+.player__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: rem(35px);
+  background: #151515;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.player__start {
+  width: 0;
+  height: 0;
+  border: rem(9px) solid transparent;
+  border-left-color: white;
+  padding: 0;
+  border-right-width: 0;
+  background: transparent;
+  outline: none;
+  position: relative;
+  
+  &.paused {
+    width: rem(14px);
+    height: rem(18px);
+    border: none;
+    &:after,
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: rem(5px);
+      top: 0;
+      bottom: 0;
+      background: white;
+    }
+    &:after {
+      right: 0;
+    }
+    &:before {
+      left: 0;
+    }
+  }
+}
+
+.player__playback {
+  height: rem(4px);
+  position: relative;
+  flex: 4;
+  margin: 0 rem(15px);
+  cursor: pointer;
+
+  display: block;
+  background: #333333;
+  display: block;
+  transform: translateY(-50%);
+  margin-right: 5%;
+
+  .player__playback-current{
+    display: block;
+    height: rem(4px);
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $red;
+  }
+}
+
+.player__playback-button {
+  background: $red;
+  border-radius: rem(50px);
+  border: none;
+  width: rem(12px);
+  height: rem(12px);
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 0;
+}
+
+.player__duration {
+  color: white;
+  font-weight: bold;
+}
+
+.player__elem {
+  width: 100%;
+  height: 100%;
+}
+
+// =================
+
+.player__volume-bar {
+	height: 4px;
+	background-color: #333;
+	position: relative;
+	flex: 1;
+	cursor: pointer;
+}
+
+.player__volume-current{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 4px;
+	background-color: $red;
+}
+
+.player__volume-button {
+	position: absolute;
+	width: rem(12px);
+	height: rem(12px);
+	border-radius: 50%;
+	background-color: $red;
+	left: 0;
+	top: rem(-3px);
+}
+
+.player__volume{
+	flex: 1;
+	display: flex;
+	align-items: center;
+}
+
+.player__volume-img{
+	width: rem(13px);
+	height: rem(16px);
+	background: url('../images/play_volume.png') center center / contain no-repeat;
+	margin-right: 15px;
+
+}
+

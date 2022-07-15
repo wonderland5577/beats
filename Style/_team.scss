@@ -1,6 +1,10 @@
 .team__title {
     margin-bottom: rem(53px);
     text-align: center;
+
+    @include tablets {
+        margin-bottom: rem(30px);
+    }
 }
 
 .team__list {
@@ -10,13 +14,31 @@
     &:last-child {
         margin-right: 0;
     }
+
+    transition: .5s;
+
+    @include tablets {
+        flex-direction: column;
+    }
 }
 
 .member {
     max-width: rem(220px);
 
+    @include tablets {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: rem(10px);
+    }
+
     &__photo {
         margin-bottom: rem(25px);
+
+        @include tablets {
+            height: 0;
+        }
+
+        transition: .3s;
     }
 
     &__name {
@@ -29,6 +51,7 @@
             content: url('../images/tri.png');
             margin-left: rem(4px);
         }
+
     }
 
     &__role {
@@ -36,6 +59,7 @@
         text-align: center;
         color: black;
         margin-bottom: rem(4px);
+        padding-top: rem(11px);
     }
 
     &__job-desc {
@@ -48,18 +72,14 @@
 .member__desc {
     overflow: hidden;
     height: 0;
+
+    transition: .3s;
 }
 
 .member__content {
-    // height: rem(65px);
     padding-bottom: rem(5px);
 }
 
 .member__details {
     background-color: transparent;
-
-    // &:active ~.member__desc {
-    //     // display: block;
-    //     height: rem(90px);
-    // }
 }

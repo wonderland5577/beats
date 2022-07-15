@@ -3,6 +3,10 @@
     @include tablets {
         display: none;
     }
+
+    &--shadowed {
+        color: $red;
+      }
 }
 
 .points__list {

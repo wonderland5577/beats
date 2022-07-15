@@ -6,13 +6,18 @@
     font-size: 1.6rem;
     font-weight: 700;
     border-radius: 10.0rem;
+    text-align: center;
+    padding: rem(18px);
     
     &--red {
         background-color: $red;
         color: white;
         margin-bottom: 7.0rem;   
+        border-color: transparent;
         &:hover {
             background-color: $red-hover;
+
+            transition: .3s;
         }
     }
 
@@ -22,8 +27,11 @@
         text-transform: none;
         color: white;
         font-weight: 400;
+        border-color: transparent;
         &:hover {
             color: $red;
+
+            transition: .3s;
         }
     }
 }

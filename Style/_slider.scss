@@ -1,3 +1,15 @@
+.bx-wrapper {
+    box-shadow: none;
+    border: 0;
+    background: transparent;
+}
+
+.bx-wrapper img {
+    max-width: 100%;
+    display: block;
+  }
+
+
 .arrow {
     font-size: 30px;
     font-weight: 2px;
@@ -5,7 +17,7 @@
     @include tablets {
         top: 20%;
     }
-    
+
     &--left {
         position: absolute;
         left: 0;
@@ -68,10 +80,15 @@
 
     &__left-col {
         margin-right: rem(59px);
+        padding-left: 3%;
 
         @include tablets {
             margin-right: 0;
         }
+    }
+
+    &__right-col {
+        padding-right: 3%;
     }
 
     &__photo1 {
@@ -120,7 +137,6 @@
             font-size: 32px;
         }
     }
-
 }
 
 .offer {
@@ -159,6 +175,18 @@
     align-items: center;
 }
 
+.dropdown__link {
+    &:hover {
+        .slider__dropdown {
+        opacity: .9;
+        left: rem(90px);
+        }
+    }
+    
+}
+
+// ==========
+
 
 .dropdown {
     width: rem(91px);
@@ -166,8 +194,17 @@
     margin-bottom: rem(25px);
     position: relative;
 
-    &:hover .dropdown__img {
-        display: block;
+    &__link {
+        cursor: pointer;
+    }
+
+    &__img {
+        display: none;
+        position: absolute;
+        max-width: rem(350px);
+        max-height: rem(400px);
+        top: 0;
+        left: rem(91px);
     }
     
     &__pic {
@@ -212,15 +249,57 @@
             display: block;
         }
     }
-
-    &__img {
-        display: none;
-        position: absolute;
-        max-width: rem(350px);
-        max-height: rem(400px);
-        top: 0;
-        left: rem(91px);
-
-    }
-
 }
+
+
+.slider__dropdown {
+    color: #2f3234;
+    position: absolute;
+    left: rem(-9999px);
+    top: 0;
+    width: rem(270px);
+    background: rgba(255, 255, 255, .93);
+    border-radius: rem(5px);
+    padding: rem(26px) rem(12px) rem(26px) rem(35px);
+    transition: opacity .3s;
+    opacity: 0;
+  
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 50%;
+      width: rem(30px);
+      left: rem(-29px);
+    }
+  }
+  
+  .dropdown__table {
+    width: 100%;
+  }
+  
+  .dropdown__icon {
+    width: rem(35px);
+    height: rem(35px);
+  }
+  
+  .dropdown__table-row {
+    border-bottom: rem(5px) solid transparent;
+  
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+  
+  .dropdown__text-container {
+    padding-left: rem(10px);
+  }
+  
+  .dropdown__table-cell {
+    vertical-align: middle;
+  }
+  
+  .dropdown__text {
+    font-size: rem(16px);
+    font-weight: bold;
+  }
